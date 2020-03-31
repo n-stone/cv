@@ -1,0 +1,75 @@
+%%%%%%%%%%%%%%%%
+% Author: Nils Gerke (ngerke@mailbox.org)
+% This is my CV created using altacv.cls (slightly modified) written by LianTze Lim (liantze@gmail.com).
+%%%%%%%%%%%%%%%%
+
+\documentclass[10pt,a4paper,ragged2e,normalphoto]{altacv}
+
+\geometry{left=1cm,right=9cm,marginparwidth=6.8cm,marginparsep=1.2cm,top=1.25cm,bottom=1.25cm}
+
+\ifxetexorluatex
+  \setmainfont{Lato}
+\else
+  \usepackage[utf8]{inputenc}
+  \usepackage[T1]{fontenc}
+  \usepackage[default]{lato}
+\fi
+
+\definecolor{DarkBlue}{HTML}{0d2042}
+\definecolor{LightBlue}{HTML}{2f4e98}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{heading}{DarkBlue}
+\colorlet{accent}{LightBlue}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+\begin{document}
+  \name{Nils Gerke}
+  \tagline{DevOps Engineer}
+  \photoR{2.5cm}{picture}
+  \personalinfo{
+    \email{ngerke@mailbox.org}
+    \phone{+49 156 783 156 06}
+    \location{Regensburg, Germany}
+    \linkedin{linkedin.com/in/nils-gerke}
+    \github{github.com/ngerke}
+  }
+
+  \begin{fullwidth}
+    \makecvheader
+  \end{fullwidth}
+
+  \cvsection[sidebar]{Experience}
+    \cvevent{DevOps Engineer}{Digitalwerk GmbH}{Jul 2018 -- Ongoing}{Regensburg, Germany}
+      \begin{itemize}
+        \item Complete rework of existing continuous integration processes, transition of legacy projects into Jenkins Pipeline Jobs \\
+        \item Automation of Build- und Test-Log analysis \\
+        \item Description of dependencies and build environment in Conan, CMAKE and Docker \\
+        \item Migration of continuous integration services into Cloud based clusters \\
+      \end{itemize}
+    \divider
+
+    \cvevent{Research fellow}{Hamburg University of Applied Sciences}{Jan 2017 -- May 2018}{Hamburg, Germany}
+      \begin{itemize}
+        \item Development of software tools for the evaluation of measurement data and simulation of wind fields with wake induced turbulence in Python (NumPy, Pandas) \\
+        \item Planning of extensive measurements for the acquisition of turbulent wind fields, as well as moments and loads occurring at wind turbines. \\
+        \item Administration and Configuration of following services: Gogs, Jenkins, Jupyter, NextCloud \\
+      \end{itemize}
+    \divider
+
+    \cvevent{Development engineer}{Nordex Energy GmbH}{April 2016 -- Dec 2017}{Hamburg, Germany}
+      \begin{itemize}
+        \item Development of a graphical software tool for the download and aggregation of operating and meta-data in Python (NumPy, Pandas, SQLAlchemy, PyQT) \\
+        \item Development of a software tool for graphical data evaluation and filtering in MATLAB with connection to Python (MATLAB API for Python) \\
+        \item Development of a methodology for estimating environmental turbulence based on SCADA data in Python (Scikit-Learn, SciPy) \\
+      \end{itemize}
+
+  \cvsection{Education}
+    \cvevent{Sustainable Energy Systems (M. Sc.)}{Hamburg University of Applied Sciences{\kern 2.5em}{\normalfont\color{LightGrey}Grade: 1,2 (excellent)}}{Sep 2013 -- May 2015}{Hamburg, Germany}
+    \divider
+
+    \cvevent{Mechanical Engineering (B. Eng.)}{Karlsruhe University of Applied Sciences{\kern 2.5em}{\normalfont\color{LightGrey}Grade: 1,4 (excellent)}}{Sep 2009 -- Aug 2013}{Karlsruhe, Germany}
+
+  \clearpage
+\end{document}
