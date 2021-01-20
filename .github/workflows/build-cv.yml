@@ -15,18 +15,18 @@ jobs:
     - name: Build CV
       run: latexmk -cd -f -interaction=batchmode -pdf $GITHUB_WORKSPACE/CV-main_page.tex
     - name: convert to png
-      run: pdftoppm CV-main_page.pdf CV-Nils-Gerke -png
+      run: pdftoppm CV-main_page.pdf CV-Nils-Stein -png
     - name: deploy to gh-pages
       run: |
         ls -al
-        mv CV-main_page.pdf ../CV-Nils-Gerke.pdf
-        mv CV-Nils-Gerke-1.png ../CV-Nils-Gerke.png
+        mv CV-main_page.pdf ../CV-Nils-Stein.pdf
+        mv CV-Nils-Stein-1.png ../CV-Nils-Stein.png
         git fetch
         git checkout gh-pages
-        mv ../CV-Nils-Gerke.pdf .
-        mv ../CV-Nils-Gerke.png .
-        git add CV-Nils-Gerke.pdf
-        git add CV-Nils-Gerke.png
+        mv ../CV-Nils-Stein.pdf .
+        mv ../CV-Nils-Stein.png .
+        git add CV-Nils-Stein.pdf
+        git add CV-Nils-Stein.png
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git commit -m "$(date '+%d/%m/%Y %H:%M:%S') updated CV"
